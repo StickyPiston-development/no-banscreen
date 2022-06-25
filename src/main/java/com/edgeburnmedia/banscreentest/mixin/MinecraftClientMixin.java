@@ -8,11 +8,11 @@ import org.spongepowered.asm.mixin.Overwrite;
 public abstract class MinecraftClientMixin {
 
 	/**
-	 * @author Edgeburn Media
-	 * @reason Force the ban screen to show
+	 * @author MrStickyPiston
+	 * @reason Force disable the ban screen
 	 */
 	@Overwrite
 	public boolean isMultiplayerBanned() {
-		return true;
+		return false;
 	}
 }
