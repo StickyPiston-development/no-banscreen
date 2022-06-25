@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "banscreentest",
+  "id": "no-banscreen",
   "version": "${version}",
 
-  "name": "Ban Screen Test",
-  "description": "Force the ban screen to appear as a demo",
+  "name": "No Ban Screen",
+  "description": "Force disables the ban screen",
   "authors": [
-    "Edgeburn Media"
+    "Edgeburn Media",
+    "MrStickyPiston"
   ],
   "contact": {
-    "homepage": "https://github.com/Edgeburn/banningtest",
-    "sources": "https://github.com/Edgeburn/banningtest"
+    "homepage": "https://github.com/StickyPiston-developement/no-banscreen/",
+    "sources": "https://github.com/StickyPiston-developement/no-banscreen/"
   },
 
   "license": "CC0-1.0",
