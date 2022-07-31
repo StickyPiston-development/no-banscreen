@@ -18,4 +18,31 @@ public class BanScreenTest implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 	}
+ResourceManagerHelper.get(ResourceType.ASSETS).registerReloadListener(new SimpleResourceReloadListener<MyResource>() {
+  @Override
+  public Identifier getFabricId() {
+    return new Identifier("resourceloader", "load_resources");
+  }
+  
+  @Override
+  public CompletableFuture<MyResource> load(ResourceManager manager, Profiler profiler, Executor executor) {
+    return CompletableFuture.supplyAsync(() -> {
+      //Do loading tasks (read files, grab things from the ResourceManager, etc)
+      //You're off-thread in this method, so don't touch the game.
+      MyResource res = loadMyResource(manager);
+      return res;
+    }, executor);
+  }
+  
+  @Override
+  public CompletableFuture<Void> apply(MyResource res, ResourceManager manager, Profiler profiler, Executor executor) {
+    return CompletableFuture.runAsync(() -> {
+      //Your loaded resource gets threaded into   ^^^ the first argument of this method.
+      //Apply the loaded data to the game somehow (dump caches and refill them, set variables, etc)
+      applyMyResourceToTheGame(res);
+    }, executor);
+  }
+});
+
+
 }
