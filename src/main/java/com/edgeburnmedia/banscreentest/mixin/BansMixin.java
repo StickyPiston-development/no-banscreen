@@ -2,7 +2,6 @@ package com.edgeburnmedia.banscreentest.mixin;
 
 import com.mojang.authlib.minecraft.BanDetails;
 import net.minecraft.client.network.Bans;
-import net.minecraft.client.network.abusereport.AbuseReportReason;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
