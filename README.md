@@ -1,4 +1,4 @@
-# No Banscreen
+# No Banscreen (MOD HAS BEEN PATCHED)
 
 This is a mod to disable the newly added ban screen. 
 Server owners are the people that should handle bans, 
